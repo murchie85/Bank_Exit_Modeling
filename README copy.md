@@ -1,36 +1,39 @@
-# Customer Bank Exit Modelling 
+# 客户银行出口建模
 
 ![Bank Customers](https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/c8ea15ce36d3d539ee64cf8d3787e950352ab027.jpg "Bank Customers")
 
-## Building a Neural Network with Keras and Tensorflow 
+## 使用Keras和Tensorflow构建神经网络
 
-## Notes 
+## 概观 
 
-- Using Keras, it is a wrapper around tensor flow and is good for error description
-- Keras network is defined as:
-- Sequential Neural network
-- Using Dense Function (classifier.add(dense..)
-- ADAM reduces cost function
-- `Binary_crossentropy` because we only have two output values
-- For more than 2 output values use `categorical_crossentropy`
+- Keras是Tensorflow的扩展程序，它提供了良好的错误输出消息。
+- 该网络定义如下:
+- 顺序神经网络
+- 该代码库使用“密集”功能（classifier.add（dense ..）
+- ADAM超参数 (Hyper Parameters) 可降低损失函数
+- 因为我们才有两个输出值所以我们可以使用 `Binary_crossentropy` 
+- 对于两个或多个值，请使用 `categorical_crossentropy`
+
+## 网络汇总
+
+1. 11 `输入参数`  
+2. 6 神经元 `L1`  
+3. 6 神经元 `L2`   
+4. 1 `输出`  
 
 
-1. 11 `inputs`  
-2. 6 neurons `L1`  
-3. 6 neurons `L2`   
-4. 1 `ouptut`  
 
-
-
-`pd.get_dummies` converts a textual field into numbers. i.e: 
+`pd.get_dummies` 将文本字段转换为数字。例如
 
 > `Spain`   = 1 0 0   
 > `Germany` = 0 1 0  
 > `France`  = 0 0 1
 
-`drop_first=True` means the first  field i.e. Spain is removed. As it can be inferred by the other data i.e. when they are all zeros.
+`drop_first=True` 表示删除了第一个字段，即SPAIN. .剩余的数据可以推断出该删除的字段
 
 
+
+This repo is forked from `krishnaik06` and builds upon the code base, to help predict customer churn. 
 
 
 ```
